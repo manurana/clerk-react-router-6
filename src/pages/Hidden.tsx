@@ -1,5 +1,6 @@
-import { UserButton, useUser } from "@clerk/clerk-react";
 import * as React from "react";
+
+import { UserButton, useUser } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
 
 const Hidden = () => {

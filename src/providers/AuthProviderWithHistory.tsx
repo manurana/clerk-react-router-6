@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { ClerkProvider, ClerkLoaded } from "@clerk/clerk-react";
+import { ClerkLoaded, ClerkProvider } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 
 type AuthProviderWithHistoryProps = {

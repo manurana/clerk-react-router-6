@@ -1,11 +1,11 @@
-import * as React from "react";
 import "./App.css";
-import AuthProviderWithHistory from "./providers/AuthProviderWithHistory";
 import { Route, Routes } from "react-router-dom";
+
 import ProtectedRoute from "./components/ProtectedRoute";
-import Home from "./pages/Home";
 import About from "./pages/About";
 import Hidden from "./pages/Hidden";
+import Home from "./pages/Home";
+import AuthProviderWithHistory from "./providers/AuthProviderWithHistory";
 
 function App() {
   return (
