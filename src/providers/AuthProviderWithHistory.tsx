@@ -10,6 +10,9 @@ type AuthProviderWithHistoryProps = {
 const AuthProviderWithHistory = ({
   children,
 }: AuthProviderWithHistoryProps) => {
+  if (!process.env.REACT_APP_CLERK_FRONTEND_API) {
+    throw new Error("REACT_APP_CLERK_FRONTEND_API  must be set");
+  }
   const frontendApi = process.env.REACT_APP_CLERK_FRONTEND_API;
 
   const navigate = useNavigate();
