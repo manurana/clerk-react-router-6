@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
+import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
 import { Outlet } from "react-router-dom";
 
 // https://www.robinwieruch.de/react-router-private-routes/
