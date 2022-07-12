@@ -1,0 +1,25 @@
+fragment BikeFragment on bike {
+  id
+  model_id
+  model {
+    name
+  }
+  color_id
+  color {
+    name
+  }
+  location_id
+  location {
+    name
+  }
+  rating {
+    avg_rating
+  }
+  is_rentable
+}
+
+query GetAllBikes {
+  bike {
+    ...BikeFragment
+  }
+}
