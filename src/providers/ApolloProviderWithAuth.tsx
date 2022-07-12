@@ -57,7 +57,7 @@ const ApolloProviderWithAuth = ({ children }: ApolloProviderWithAuthProps) => {
 
     let token;
     try {
-      token = await getToken({ template: "hasura" });
+      token = await getToken({ template: "hasura-with-roles" });
       // console.log({ token });
     } catch (error) {
       console.log(error);
@@ -74,13 +74,21 @@ const ApolloProviderWithAuth = ({ children }: ApolloProviderWithAuthProps) => {
 
   const authLinkHttp = setContext(async (_, { headers, ...rest }) => {
     // console.log({ isSignedIn }, { getToken });
+    console.log(
+      "🚀 ~ file: ApolloProviderWithAuth.tsx ~ line 77 ~ authLinkHttp ~ isSignedIn",
+      isSignedIn
+    );
 
     // if (!isSignedIn) return { headers, ...rest }; //TODO: fix after Clerk team response
 
     let token;
     try {
-      token = await getToken({ template: "hasura" });
+      token = await getToken({ template: "hasura-with-roles" });
       // console.log({ token });
+      console.log(
+        "🚀 ~ file: ApolloProviderWithAuth.tsx ~ line 84 ~ authLinkHttp ~ token",
+        token
+      );
     } catch (error) {
       console.log(error);
     }

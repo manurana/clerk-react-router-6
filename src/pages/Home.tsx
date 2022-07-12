@@ -11,6 +11,7 @@ const Home = () => {
       </main>
       <nav>
         <Link to="/about">About</Link>
+        <br />
         <Link to="/hidden">Hidden</Link>
       </nav>
     </React.Fragment>
