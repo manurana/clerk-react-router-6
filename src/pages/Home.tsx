@@ -1,8 +1,12 @@
 import * as React from "react";
 
+import { useApolloClient } from "@apollo/client";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const client = useApolloClient();
+  client.resetStore();
+
   return (
     <React.Fragment>
       <main>
